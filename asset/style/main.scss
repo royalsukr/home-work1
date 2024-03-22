@@ -1,11 +1,17 @@
-@import url(responsive.scss);
+@import 'responsive.scss';
 
+
+
+
+*{
+    box-sizing: border-box;
+}
 header{
     background-color: #14171F;
-    background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     width: 100%;
-    height: 150dvh;
+    height: auto;
+    
 nav{
     display: flex;
     align-items: center;
@@ -16,10 +22,15 @@ nav{
 .list{
 display: flex;
 gap: 56px;
+@include responsive(smartphone-portrait) {
+    display: none;
+}
+
 
 .nav__item{
     color: aliceblue;
     cursor: pointer;
+
 }
 .nav__item:hover{
     background-color: #7C5CFC;
@@ -30,6 +41,9 @@ gap: 56px;
 .nav__buttons{
     gap: 20px;
 display: flex;
+@include responsive(smartphone-portrait) {
+    display: none;
+}
     button{
     background-color: #7C5CFC;
     border-radius: 30px;
@@ -57,12 +71,23 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding-top: 120px;
+@include responsive(smartphone-portrait) {
+padding-top:50px ;
+padding-left: 0px;
+ }
     .hero__content{
         width: 748px;
         height: 216px;
         font-size:80px;
         color: white;
         text-align: center;
+        @include responsive(smartphone-portrait) {
+            font-size: 30px;
+            width: 317px;
+            text-align: start;
+            height: 70px;
+            text-align: start;
+         }
     }
 
 .hero__little__content{
@@ -71,11 +96,23 @@ width: 400px;
 height: 72px;
 font-size: 18px;
 text-align: center;
+
+@include responsive(smartphone-portrait) {
+    width: 344px;
+    text-align: start;
+    padding-left: 10px;
+ }
 }
 
 .hero__buttons{
     display: flex;
     gap: 10px;
+    @include responsive(smartphone-portrait) {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       width: 1 ;
+         }
 button{
     border-radius:30px;
     padding: 14px 31px;
@@ -91,6 +128,9 @@ button{
     cursor: pointer;
     color: aliceblue;
     border: 1px solid white;
+    @include responsive(smartphone-portrait) {
+       padding:14px 60px ;
+         }
 }
 .hero__button:hover{
 background-color: #7C5CFC;
@@ -99,15 +139,19 @@ background-color: #7C5CFC;
 }
 .body{
     background-color: white;
-   margin-top : 80px;
+   margin-top : 120px;
    height: 358px;
-   margin-left: 5%;
-   margin-right: 5%;
+  width: 90%;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
    display: flex;
-   flex-direction: column;
-   background-size: cover;
+   justify-content: space-around;
    border-radius: 11px;
-
+   @include responsive(smartphone-portrait) {
+   margin-left: auto;
+   
+}
 .navbar{
     padding-top: 20px;
     display: flex;
@@ -115,10 +159,13 @@ background-color: #7C5CFC;
     gap: 50px;
     width: 200px;
     margin-left: 30px;
+    @include responsive(smartphone-portrait) {
+      margin-left: 5px;
+          }
     .body__item-hover{
         background-color: #7C5CFC;
         display: flex;
-        
+        margin-bottom: 5px;
         cursor: pointer;
        padding: 10px 5px;
        border-radius: 11px;
@@ -128,20 +175,53 @@ background-color: #7C5CFC;
         cursor: pointer;
        padding: 10px 5px;
        border-radius: 11px;
+       margin-bottom: 5px;
     }
     .body__item:hover{
-        display: flex;
-        padding-bottom: 20px;
-        cursor: pointer;
-       padding: 10px 5px;
-       border-radius: 11px;
        background-color: #7C5CFC;
     }
-   
-
-    
 }
 
-}
-}
 
+.searching{
+    background:rgba(225,225,225,0.2);
+    border-radius:  50px;
+    padding: 5px 10px;
+    border: 1px solid black;
+     display: flex;
+     width: 410px;
+     margin-top: 20px;
+     @include responsive(smartphone-portrait) {
+        width:100px;
+     }
+    input{
+        border: 0;
+        background: transparent;
+        outline: 0;
+    }
+}
+.imgs{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+ .g{
+    @include responsive(smartphone-portrait) {
+        width: 6%;
+           }
+ }
+    .notification{
+        border: 1px solid black;
+        padding: 8px;
+        height: 37px;
+        border-radius: 20px;
+        @include responsive(smartphone-portrait) {
+           display: none;
+               }
+    }
+    .notification:hover{
+     border:1px solid #7C5CFC;
+     background-color: #7C5CFC;
+    }
+        }
+}
+}

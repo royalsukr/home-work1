@@ -1,10 +1,12 @@
-@import url(responsive.scss);
+* {
+  box-sizing: border-box;
+}
+
 header {
   background-color: #14171F;
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   width: 100%;
-  height: 150dvh;
+  height: auto;
 }
 header nav {
   display: flex;
@@ -16,6 +18,17 @@ header nav {
 header nav .list {
   display: flex;
   gap: 56px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header nav .list {
+    display: none;
+  }
 }
 header nav .list .nav__item {
   color: aliceblue;
@@ -28,6 +41,17 @@ header nav .list .nav__item:hover {
 header nav .nav__buttons {
   gap: 20px;
   display: flex;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header nav .nav__buttons {
+    display: none;
+  }
 }
 header nav .nav__buttons button {
   background-color: #7C5CFC;
@@ -52,6 +76,18 @@ header .hero {
   flex-direction: column;
   align-items: center;
   padding-top: 120px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header .hero {
+    padding-top: 50px;
+    padding-left: 0px;
+  }
 }
 header .hero .hero__content {
   width: 748px;
@@ -59,6 +95,21 @@ header .hero .hero__content {
   font-size: 80px;
   color: white;
   text-align: center;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header .hero .hero__content {
+    font-size: 30px;
+    width: 317px;
+    text-align: start;
+    height: 70px;
+    text-align: start;
+  }
 }
 header .hero .hero__little__content {
   color: #90A3BF;
@@ -66,10 +117,37 @@ header .hero .hero__little__content {
   height: 72px;
   font-size: 18px;
   text-align: center;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header .hero .hero__little__content {
+    width: 344px;
+    text-align: start;
+    padding-left: 10px;
+  }
 }
 header .hero .hero__buttons {
   display: flex;
   gap: 10px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header .hero .hero__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1;
+  }
 }
 header .hero .hero__buttons button {
   border-radius: 30px;
@@ -86,20 +164,43 @@ header .hero .hero__buttons .hero__button {
   cursor: pointer;
   color: aliceblue;
   border: 1px solid white;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header .hero .hero__buttons .hero__button {
+    padding: 14px 60px;
+  }
 }
 header .hero .hero__buttons .hero__button:hover {
   background-color: #7C5CFC;
 }
 header .body {
   background-color: white;
-  margin-top: 80px;
+  margin-top: 120px;
   height: 358px;
+  width: 90%;
+  justify-content: center;
   margin-left: 5%;
   margin-right: 5%;
   display: flex;
-  flex-direction: column;
-  background-size: cover;
+  justify-content: space-around;
   border-radius: 11px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header .body {
+    margin-left: auto;
+  }
 }
 header .body .navbar {
   padding-top: 20px;
@@ -108,10 +209,22 @@ header .body .navbar {
   gap: 50px;
   width: 200px;
   margin-left: 30px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header .body .navbar {
+    margin-left: 5px;
+  }
 }
 header .body .navbar .body__item-hover {
   background-color: #7C5CFC;
   display: flex;
+  margin-bottom: 5px;
   cursor: pointer;
   padding: 10px 5px;
   border-radius: 11px;
@@ -121,12 +234,72 @@ header .body .navbar .body__item {
   cursor: pointer;
   padding: 10px 5px;
   border-radius: 11px;
+  margin-bottom: 5px;
 }
 header .body .navbar .body__item:hover {
+  background-color: #7C5CFC;
+}
+header .body .searching {
+  background: rgba(225, 225, 225, 0.2);
+  border-radius: 50px;
+  padding: 5px 10px;
+  border: 1px solid black;
   display: flex;
-  padding-bottom: 20px;
-  cursor: pointer;
-  padding: 10px 5px;
-  border-radius: 11px;
+  width: 410px;
+  margin-top: 20px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header .body .searching {
+    width: 100px;
+  }
+}
+header .body .searching input {
+  border: 0;
+  background: transparent;
+  outline: 0;
+}
+header .body .imgs {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+header .body .imgs .g {
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header .body .imgs .g {
+    width: 6%;
+  }
+}
+header .body .imgs .notification {
+  border: 1px solid black;
+  padding: 8px;
+  height: 37px;
+  border-radius: 20px;
+  /*
+      breakpoints are viewport arbitrary values,
+      they are defined with the aim of allowing the SCSS/CSS code of your app' behave accordingly to your user's device width,
+      the breakpoints I used were inspired by Bootstrap =>
+      https://getbootstrap.com/docs/5.0/layout/breakpoints/
+  */
+}
+@media only screen and (max-width: 575.98px) {
+  header .body .imgs .notification {
+    display: none;
+  }
+}
+header .body .imgs .notification:hover {
+  border: 1px solid #7C5CFC;
   background-color: #7C5CFC;
 }/*# sourceMappingURL=main.css.map */
